@@ -32,7 +32,11 @@ Auth::routes();
 //});
 //Route::get('register', 'RegisterChange@showRegistrationForm')->name('register');
 //Route::post('register', 'Auth\RegisterController@register');
-
+Route::match(['get','post'],'/editing/{page}', 'EditController@execute')->name('editing');
+Route::match(['get','post'],'/delete/{page}', 'EditController@delete')->name('delete');
+Route::match(['get','post'],'/add/{page}', 'EditController@add')->name('add');
+//Route::get('/message', 'Articles_Users@index')->name('message');
+//Route::post('/message', 'Articles_Users@post')->name('message');
 
 Route::group(['prefix' => 'user', 'middleware' => ['web', 'auth']], function() {
     Route::get('/', ['uses' => 'User\UserController@show', 'as' => 'user_index']);

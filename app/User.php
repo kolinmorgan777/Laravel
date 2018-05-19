@@ -34,6 +34,10 @@ class User extends Authenticatable
         'password', 'remember_tosken',
     ];
 
+    public function articles() {
+        return $this->hasMany('App\Article');
+    }
+
     public static function registerAndLogin($user) {
 
 //        $images = new RegisterController();
