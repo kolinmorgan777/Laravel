@@ -32,9 +32,10 @@ Auth::routes();
 //});
 //Route::get('register', 'RegisterChange@showRegistrationForm')->name('register');
 //Route::post('register', 'Auth\RegisterController@register');
-Route::match(['get','post'],'/editing/{page}', 'EditController@execute')->name('editing');
+Route::match(['get','post'],'/editing/{id}', 'EditController@editing')->name('editing');
+//Route::match(['get','post'],'/editing_post/{id}', 'EditController@editing_post')->name('editing_post');
 Route::match(['get','post'],'/delete/{page}', 'EditController@delete')->name('delete');
-Route::match(['get','post'],'/add/{page}', 'EditController@add')->name('add');
+Route::match(['get','post'],'/add', 'EditController@add')->name('add');
 //Route::get('/message', 'Articles_Users@index')->name('message');
 //Route::post('/message', 'Articles_Users@post')->name('message');
 

@@ -303,14 +303,14 @@
                                             </div>
                                         </div>-->
                     <!-- search form -->
-                    <form action="#" method="get" class="sidebar-form">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </form>
+                    <!--                    <form action="#" method="get" class="sidebar-form">
+                                            <div class="input-group">
+                                                <input type="text" name="q" class="form-control" placeholder="Search...">
+                                                <span class="input-group-btn">
+                                                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                                                </span>
+                                            </div>
+                                        </form>-->
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
@@ -521,7 +521,7 @@
 
                 </table>
                 <br>
-               
+
                 <style>
                     a.button7 {
                         font-weight: 700;
@@ -538,7 +538,7 @@
                         background: rgb(33,147,90);
                         box-shadow: 0 3px rgb(33,147,90) inset;
                     </style>
-                 &#8194  <a href="/add/{{$article->id}}" class="button7">Добавить</a>
+                    &#8194  <a href="/add" class="button7">Добавить</a>
 
                     <!-- Main content -->
                           <!--<section class="content">
@@ -1148,7 +1148,7 @@
                 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
                 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
                 <script>
-                                    $.widget.bridge('uibutton', $.ui.button);
+                            $.widget.bridge('uibutton', $.ui.button);
                 </script>
                 <!-- Bootstrap 3.3.5 -->
                 <script src="{{ asset('diplom/bootstrap/js/bootstrap.min.js')}}"></script>

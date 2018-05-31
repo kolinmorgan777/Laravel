@@ -469,73 +469,73 @@
                         <li class="active">Dashboard</li>
                     </ol>
                 </section>
-                <form class="contact_form" action="{{ route('add') }}" method="post" name="contact_form" enctype="multipart/form-data">
+                <form class="contact_form" action="{{ route('editing',array('id'=>$data['id'])) }}" method="post" name="contact_form" enctype="multipart/form-data">
                     {{ csrf_field() }}
 
                     <ul>
                         <li>
-                            <h2>Добавить запись</h2>
+                            <h2>Редактировать запись</h2>
                             <span class="required_notification">* Denotes Required Field</span>
                         </li>
 
 
-                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}" />
+                        <input type="hidden" name="id" value="{{ $data['id'] }}" />
 
                         <li>
                             <label for="name">№ заказа:</label>
-                            <input type="number" name="number"   required />
+                            <input type="number" name="number" value="{{ $data['number'] }}"   required />
                         </li>
                         <li>
                             <label for="email">количество изделий:</label>
-                            <input type="number" name="amount"  required />
+                            <input type="number" name="amount" value="{{ $data['amount'] }}"  required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
                         <h3>Производительность по станкам(шт/час)</h3>
                         <li>
                             <label for="website">1-й станок:</label>
-                            <input type="number" name="performance1"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="performance1" value="{{ $data['performance1'] }}"  required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
                         <li>
                             <label for="website">2-й станок:</label>
-                            <input type="number" name="performance2"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="performance2" value="{{ $data['performance2'] }}" required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
                         <li>
                             <label for="website">3-й станок:</label>
-                            <input type="number" name="performance3"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="performance3" value="{{ $data['performance3'] }}" required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
                         <li>
                             <label for="website">4-й станок:</label>
-                            <input type="number" name="performance4"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="performance4" value="{{ $data['performance4'] }}" required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
                         <h3>Себестоимость (тыс.руб/шт)</h3>
                         <li>
                             <label for="website">1-й станок:</label>
-                            <input type="number" name="cost_price1"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="cost_price1" value="{{ $data['cost_price1'] }}" required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
                         <li>
                             <label for="website">2-й станок:</label>
-                            <input type="number" name="cost_price2"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="cost_price2" value="{{ $data['cost_price2'] }}" required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
                         <li>
                             <label for="website">3-й станок:</label>
-                            <input type="number" name="cost_price3"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="cost_price3" value="{{ $data['cost_price3'] }}" required  />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
                         <li>
                             <label for="website">4-й станок:</label>
-                            <input type="number" name="cost_price4"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="cost_price4" value="{{ $data['cost_price4'] }}" required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
 
                         <li>
                             <label for="website">Цена(1/шт)</label>
-                            <input type="number" name="price"  required pattern="(http|https)://.+"/>
+                            <input type="number" name="price" value="{{ $data['price'] }}" required />
                             <span class="form_hint">Proper format "1 2 3..."</span>
                         </li>
 
